@@ -7,11 +7,6 @@ The dataset presented in this competition (the ELLIPSE corpus) comprises argumen
 
 Each measure represents a component of proficiency in essay writing, with greater scores corresponding to greater proficiency in that measure. The scores range from 1.0 to 5.0 in increments of 0.5. Your task is to predict the score of each of the six measures for the essays given in the test set.
 
-The metric used this competiton is  MCRMSE, mean columnwise root mean squared error:
-$$ \frac {1}{N_t} \sum_{j=1}^{N_t) \sqrt { \frac {1}{n} \sum_{i=1}^n (y_{ij} - \hat y_{ij})^2} $$
-
-where $ N_t $ is the scored ground truth target columns, and $ y $ and $ \hat{y} $ are the actual and predicted values respectively
-
 # Key takeaways from FB NLP Competition
 
 **DeBERTa is the SOTA model for NLP like classification and regression**
