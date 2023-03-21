@@ -1,7 +1,8 @@
-# Kaggle-Sandbox
-A collection of my solutions and notes from participating in Kaggle competitions
+# ML Experimentation Sandbox
+A collection of techniques and notes to train machine learning models efficiently and effectively.
 
-### **Competitions**
-1. Feedback Prize 3- English Language Learning
-2. Sep Tebular Playground Series
-3. Malaysia Study Jam Mini-Hackaton
+## Content
+1. Sentiment Classification
+2. Feedback Prize 3- English Language Learning
+3. Sep Tebular Playground Series
+4. Malaysia Study Jam Mini-Hackaton
