@@ -15,3 +15,5 @@ Things to consider to tune
 
 ## Academic Papers
 1. [Image Augmentation Techniques for Mammogram Analysis](https://eprints.bournemouth.ac.uk/36908/7/jimaging-08-00141.pdf)
+
+***Unfortunately, I did not have enough bandwith to pursue this project any further due to other commitments at the time of the competition.***

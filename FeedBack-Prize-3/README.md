@@ -9,11 +9,11 @@ Each measure represents a component of proficiency in essay writing, with greate
 
 # Key takeaways from FB NLP Competition
 
-**DeBERTa is the SOTA model for NLP like classification and regression**
-This is generally true but do always check the performance of the base model across different architectures. In some small casses, other architectures like RoBERTa might overperform however very unlikely. 
+**DeBERTa is SOTA model for NLP predictive modelling tasks**
+This is generally true but do always check (by experimenting) the performance of base model across different architectures such as BERT & RoBERTa. In some few casses, other architectures like RoBERTa might overperform however very unlikely. 
 1. Trained DeBERTa model of all sizes from XS to L. The bigger the model, the lower MRSCE score is.
 
-**Training Optimization Techniques**
+### Training Optimization Techniques
 1. Mixed-Precision (FP16)
     - Mixed precision is the combined use of different numerical precisions, both 16-bit and 32-bit floating-point types, in a computational method to make training run faster and use less memory
     - fastai has a detail and well explained note on [this method here](https://docs.fast.ai/callback.fp16.html). Another [resouces](https://towardsdatascience.com/understanding-mixed-precision-training-4b246679c7c4)
@@ -22,7 +22,7 @@ This is generally true but do always check the performance of the base model acr
 
 Techniques to explore SeFit.
 
-**Performance Optimization Techniques**
+### Performance Optimization Techniques
 1. Pooling Layers
     - I have found that attention pooling layer works the best over mean, max and min layer for this competiton. There are a bunch of other layers like 
 
@@ -30,13 +30,13 @@ Techniques to explore SeFit.
 
 Other techniques to explore for future project: AWS, Reinitialising few last layers
 
-**Inference Optimization Techniques**
-1. I use a DeBERTa XS Model for faster inference
+### Inference Optimization Techniques
+1. I use a DeBERTa XS Model to gurantee fast inference latency. I have also tried to use a DeBERTa L model and it is still fast enough for inference. However, I have not tried to use a DeBERTa XL model for inference. I suspect that it will be too slow for inference.
 
 Techniques available to explore for future project: KD using Techer Outlier Rejection Loss function (regression), ONNX, weight prunning
 There's also the idea of ML-driven accuarcy-aware tunning for quantization - finding the optimal quantization area of the model
 
-**Evaluation: A road to Robust CV Approach**
+### Evaluation: A road to Robust CV Approach
 1. In general CV technique employed does show a positive correlation with the private leaderboard if
     - mean score of a model is outside one std away from the mean score of another model then the different in performance is significant meaning it does have correlation with the private leaderboard performance.
     - example optimised-derberta = baseline deberta despite the mean improvement. but optimised-deberta>deberta-xsmall
