@@ -28,13 +28,17 @@ Techniques to explore SeFit.
 
 2. Layerwise Learning Rate Decay
 
-Other techniques to explore for future project: AWS, Reinitialising few last layers
+Other techniques to explore for future project: 
+1. Stochastic Weight Averaging - [SWA](https://pytorch.org/blog/stochastic-weight-averaging-in-pytorch/), Pytorch-Lighning has a nice callback to implement this.
+2. Reinitialising few last layers
 
-### Inference Optimization Techniques
-1. I use a DeBERTa XS Model to gurantee fast inference latency. I have also tried to use a DeBERTa L model and it is still fast enough for inference. However, I have not tried to use a DeBERTa XL model for inference. I suspect that it will be too slow for inference.
+### Inference Optimisation Techniques
+I use a DeBERTa XS Model to gurantee fast inference latency. 
 
-Techniques available to explore for future project: KD using Techer Outlier Rejection Loss function (regression), ONNX, weight prunning
-There's also the idea of ML-driven accuarcy-aware tunning for quantization - finding the optimal quantization area of the model
+Inference Otimisation Techniques available to explore for future project: 
+1. KD via Techer Outlier Rejection Loss function (regression), 
+2. Weight pruning
+3. Quantization
 
 ### Evaluation: A road to Robust CV Approach
 1. In general CV technique employed does show a positive correlation with the private leaderboard if
@@ -68,7 +72,7 @@ high impact solutions
 2. Pseudo Labelling
 
 
-Resources`
+### Resources
 1. [Optimization approaches for Transformers ](https://www.kaggle.com/code/vad13irt/optimization-approaches-for-transformers)
 1. [Submission Time Check](https://www.kaggle.com/code/yasufuminakama/fb3-submission-time)
 2. [InnerRank API call](https://www.kaggle.com/competitions/feedback-prize-english-language-learning/discussion/368175)
